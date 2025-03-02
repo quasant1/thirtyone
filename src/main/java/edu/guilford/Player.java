@@ -6,11 +6,13 @@ public class Player {
     private int lives;
     private Hand hand;
     private boolean knocked;
+    private boolean thirtyone;
 
     public Player() {
         lives = 3;
         hand = new Hand();
         knocked = false;
+        thirtyone = false;
     }
 
     public void loseLife() {
@@ -57,6 +59,7 @@ public class Player {
     // decision making -- we do greedy for taking cards
     public void decision(Queue<Card> stockPile, Stack<Card> discardPile, int r) {
         boolean turnIsDone = false;
+        //if (score() == 31) thirtyone = true;
         if (r != 1 && score() > 20)
             knocked = true;
         else {
@@ -92,7 +95,8 @@ public class Player {
                     drawCard(potCard);
                     removeCard(maxCard);
                     discardPile.pop();
-                    discardPile.add(maxCard);
+                    if (maxCard.getRank().ordinal() > 6) stockPile.add(maxCard); // if the card has a large rank, add to stock pile
+                    else discardPile.add(maxCard);
                     turnIsDone = true;
                 }
             }
@@ -109,7 +113,8 @@ public class Player {
                 drawCard(newCard);
                 Card toRemove = greedy(newCard);
                 removeCard(toRemove);
-                discardPile.add(toRemove);
+                if (toRemove.getRank().ordinal() > 6) stockPile.add(toRemove); // if the card has a large rank, add to stock pile
+                else discardPile.add(toRemove);
 
             }
         }
@@ -117,6 +122,9 @@ public class Player {
 
     public boolean getKnocked() {
         return knocked;
+    }
+    public boolean getThirtyone() {
+        return thirtyone;
     }
 
     public Card greedy(Card card) {
