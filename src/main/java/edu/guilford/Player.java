@@ -93,11 +93,11 @@ public class Player {
                     maxScore = temp.getTotalValue();
                     maxCard = hand.getCard(2);
                 }
-                if (maxScore > score() + 8) { // draw from discard pile
+                if (maxScore > score() + 8 || stockPile.size() == 0) { // draw from discard pile
                     drawCard(potCard);
                     removeCard(maxCard);
                     discardPile.pop();
-                    if (maxCard.getRank().ordinal() > 6) stockPile.add(maxCard); // if the card has a large rank, add to stock pile
+                    if (maxCard.getRank().ordinal() > 6) stockPile.add(maxCard); // if the card has a large rank, add to stock pile so other people can't use it (not immediately, at least)
                     else discardPile.add(maxCard);
                     turnIsDone = true;
                 }
