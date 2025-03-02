@@ -57,11 +57,11 @@ public class Player {
     // decision making -- we do greedy for taking cards
     public void decision(Queue<Card> stockPile, Stack<Card> discardPile, int r) {
         boolean turnIsDone = false;
-        if (r != 1 && score() > 25)
+        if (r != 1 && score() > 20)
             knocked = true;
         else {
             // see if taking from discard pile increases the score more than 8 points
-            if (discardPile != null) {
+            if (discardPile.size() != 0) {
                 Card potCard = discardPile.peek(); // potential card
                 int maxScore = score();
                 Card maxCard = hand.getCard(0); // index to remove to maxmimize score
@@ -99,7 +99,7 @@ public class Player {
             // if not, take from stock pile. we will just use a greedy algorithm, i.e. just
             // get rid of the card so the score is maximized
             if (!turnIsDone) {
-                if (stockPile == null) {
+                if (stockPile.size() != 0) {
                     for (int i = 0; i < discardPile.size(); i++) {
                         stockPile.add(discardPile.pop());
                     }

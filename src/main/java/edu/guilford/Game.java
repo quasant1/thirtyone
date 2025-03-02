@@ -25,12 +25,14 @@ public class Game {
                 (players.get(i)).drawCard(deck.deal());
             }
         }
-        Queue<Card> stockPile = new LinkedList<>();
+        stockPile = new LinkedList<>();
         for (int i = 0; i < deck.size(); i++) {
             stockPile.add(deck.deal());
         }
-        Stack<Card> discardPile = new Stack<>();
+        discardPile = new Stack<>();
         discardPile.push(stockPile.poll());
+        //System.out.println(stockPile.size());
+        //System.out.println(discardPile.size());
         currentPlayer = 0;
     }
 
@@ -38,6 +40,7 @@ public class Game {
         for (int i=0;i<players.size();i++) {
             players.get(i).decision(stockPile, discardPile,1);
         }
+        //System.out.println(discardPile.size());
     }
 
     public void restOfGame() {
@@ -51,6 +54,7 @@ public class Game {
                 }
                 break;
             }
+            currentPlayer = (currentPlayer + 1) % players.size();
         }
         // find the loser(s)
         // does someone have 31? 
@@ -63,7 +67,7 @@ public class Game {
             for (int i=0;i<players.size();i++) {
                 if (!thirtyones.contains(players.get(i))) {
                     players.get(i).loseLife();
-                    if (players.get(i).getLives() == 0) {
+                    if (players.get(i).getLives() <= 0) {
                         players.remove(i);
                         i--;
                     }
@@ -82,7 +86,7 @@ public class Game {
                         players.get(i).loseLife();
                     }
 
-                    if (players.get(i).getLives() == 0) {
+                    if (players.get(i).getLives() <= 0) {
                         players.remove(i);
                         i--;
                     }
@@ -102,11 +106,11 @@ public class Game {
                 players.get(i).drawCard(deck.deal());
             }
         }
-        Queue<Card> stockPile = new LinkedList<>();
+        stockPile = new LinkedList<>();
         for (int i=0;i<deck.size();i++) {
             stockPile.add(deck.deal());
         }
-        Stack<Card> discardPile = new Stack<>();
+        discardPile = new Stack<>();
         discardPile.push(stockPile.poll());
         currentPlayer = 0;
     }
@@ -136,10 +140,13 @@ public class Game {
     // toString
     public String toString() {
         String str;
-        str = "Game: " + players.size() + " players" + "\n";
+        str = "Game Round: " + players.size() + " players" + "\n";
         for (int i=0; i<players.size(); i++) {
-            str += players.get(i).toString() + "\n";
+            str += (i+1) + " " + players.get(i).toString() + "\n";
         }
+        //System.out.println("Stock Pile: " + stockPile.size());
+        //str += "Stock Pile: " + stockPile.size() + "\n";
+        //str += "Discard Pile: " + discardPile.size() + "\n";
         return str;
     }
 
