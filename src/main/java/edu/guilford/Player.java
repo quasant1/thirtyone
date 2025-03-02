@@ -7,12 +7,14 @@ public class Player {
     private Hand hand;
     private boolean knocked;
     private boolean thirtyone;
+    private int playerID;
 
-    public Player() {
+    public Player(int playerID) {
         lives = 3;
         hand = new Hand();
         knocked = false;
         thirtyone = false;
+        this.playerID = playerID;
     }
 
     public void loseLife() {
@@ -126,6 +128,9 @@ public class Player {
     public boolean getThirtyone() {
         return thirtyone;
     }
+    public int getPlayerID() {
+        return playerID;
+    }
 
     public Card greedy(Card card) {
         int maxScore = score();
@@ -156,10 +161,11 @@ public class Player {
         }
         return maxCard;
     }
+    
 
     // toString
     public String toString() {
-        return "Player: " + lives + " lives\n" + "Score: " + score() +
+        return "Player " + playerID + ": " + lives + " lives\n" + "Score: " + score() +
                 "\n" + hand.toString();
     }
 

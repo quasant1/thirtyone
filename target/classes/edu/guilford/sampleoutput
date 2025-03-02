@@ -1,107 +1,91 @@
-Game Round: 3 players
-1 Player: 3 lives
-Score: 16
-KING of CLUBS
-NINE of SPADES
-SIX of CLUBS
-
-2 Player: 3 lives
-Score: 14
-FOUR of SPADES
-QUEEN of HEARTS
-JACK of SPADES
-
-3 Player: 3 lives
-Score: 21
-JACK of DIAMONDS
-JACK of CLUBS
-ACE of DIAMONDS
-
-
-Game Round: 3 players
-1 Player: 3 lives
-Score: 19
-SEVEN of HEARTS
-NINE of CLUBS
-QUEEN of CLUBS
-
-2 Player: 3 lives
-Score: 21
-JACK of CLUBS
-FIVE of CLUBS
-SIX of CLUBS
-
-3 Player: 2 lives
-Score: 18
-EIGHT of CLUBS
-SEVEN of DIAMONDS
-KING of CLUBS
-
-
-Game Round: 3 players
-1 Player: 2 lives
-Score: 10
-TWO of HEARTS
-QUEEN of DIAMONDS
-FIVE of SPADES
-
-2 Player: 3 lives
-Score: 16
-ACE of HEARTS
-TEN of DIAMONDS
-SIX of DIAMONDS
-
-3 Player: 2 lives
-Score: 12
-SEVEN of CLUBS
-THREE of SPADES
-FIVE of CLUBS
-
-
-Game Round: 3 players
-1 Player: 1 lives
-Score: 15
-FIVE of HEARTS
-ACE of CLUBS
-FOUR of CLUBS
-
-2 Player: 1 lives
-Score: 15
-FIVE of SPADES
-QUEEN of SPADES
+(Intial draw) After Game Round 0: 3 players
+Player 1: 3 lives
+Score: 23
 THREE of DIAMONDS
-
-3 Player: 2 lives
-Score: 21
-KING of HEARTS
-ACE of DIAMONDS
+JACK of DIAMONDS
 KING of DIAMONDS
 
+Player 2: 3 lives
+Score: 14
+SIX of SPADES
+EIGHT of SPADES
+FIVE of HEARTS
 
-Game Round: 2 players
-1 Player: 1 lives
-Score: 12
-QUEEN of CLUBS
-TWO of DIAMONDS
-TEN of DIAMONDS
+Player 3: 3 lives
+Score: 14
+SIX of HEARTS
+EIGHT of HEARTS
+SEVEN of SPADES
 
-2 Player: 2 lives
-Score: 20
+
+After Game Round 1: 3 players
+Player 1: 1 lives
+Score: 14
+SIX of SPADES
+EIGHT of SPADES
+FIVE of HEARTS
+
+Player 2: 3 lives
+Score: 15
 TEN of SPADES
-TWO of CLUBS
-JACK of SPADES
+SIX of HEARTS
+NINE of HEARTS
+
+Player 3: 3 lives
+Score: 20
+JACK of DIAMONDS
+KING of DIAMONDS
+SEVEN of SPADES
 
 
-Game Round: 1 players
-1 Player: 2 lives
-Score: 21
-QUEEN of DIAMONDS
+After Game Round 2: 2 players
+Player 2: 3 lives
+Score: 27
+JACK of DIAMONDS
 ACE of DIAMONDS
-EIGHT of HEARTS
+SIX of DIAMONDS
+
+Player 3: 3 lives
+Score: 18
+EIGHT of CLUBS
+FIVE of HEARTS
+JACK of CLUBS
 
 
-The winner is Player: 2 lives
+After Game Round 3: 2 players
+Player 2: 2 lives
+Score: 11
+SIX of SPADES
+ACE of DIAMONDS
+THREE of HEARTS
+
+Player 3: 3 lives
+Score: 20
+TEN of DIAMONDS
+JACK of DIAMONDS
+SIX of CLUBS
+
+
+After Game Round 4: 2 players
+Player 2: 2 lives
+Score: 14
+FOUR of CLUBS
+QUEEN of CLUBS
+FIVE of SPADES
+
+Player 3: 1 lives
 Score: 10
-EIGHT of HEARTS
-TWO of HEARTS
-THREE of CLUBS
+JACK of CLUBS
+KING of DIAMONDS
+KING of HEARTS
+
+
+After Game Round 5: 1 players
+Player 2: 2 lives
+Score: 16
+SIX of HEARTS
+JACK of HEARTS
+THREE of SPADES
+
+
+The winner is player 2
